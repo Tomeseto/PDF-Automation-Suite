@@ -15,3 +15,6 @@ reportlab>=4.0.0
 
 # Testing (Everyone)
 pytest>=7.0.0
+
+# GUI Framework
+customtkinter>=5.2.2
