@@ -1,15 +1,17 @@
 """PDF Automation Suite — main entry point."""
 
+import customtkinter as ctk
+from app.gui.app_window import AppWindow
 
 def main() -> None:
-    """Launch the PDF Automation Suite.
-
-    The GUI will be wired in during the GUI integration phase (Phase 7-8).
-    For now this serves as a minimal entry point stub.
-    """
-    # GUI launch will be wired in Phase 7–8
-    print("PDF Automation Suite — GUI not yet connected.")
-
+    """Launch the PDF Automation Suite."""
+    
+    # Set default appearance
+    ctk.set_appearance_mode("System")
+    ctk.set_default_color_theme("blue")
+    
+    app = AppWindow()
+    app.mainloop()
 
 if __name__ == "__main__":
     main()
