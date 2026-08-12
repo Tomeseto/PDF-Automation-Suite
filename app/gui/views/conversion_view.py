@@ -212,7 +212,11 @@ class ConversionView(ctk.CTkFrame):
                 if not results:
                     self.search_output.insert("end", "No matches found.")
                 else:
-                    self.search_output.insert("end", json.dumps(results, indent=2))
+                    self.search_output.insert("end", f"Found {len(results)} matches:\n\n")
+                    for match in results:
+                        page = match.get("page", "?")
+                        snippet = match.get("snippet", "").replace("\n", " ")
+                        self.search_output.insert("end", f"--- Page {page} ---\n...{snippet}...\n\n")
                 self.search_status.show_success(f"Found {len(results)} matches.")
             except Exception as e:
                 self.search_status.show_error(f"Error: {e}")
