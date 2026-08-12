@@ -5,18 +5,8 @@ from app.gui.views.organization_view import OrganizationView
 from app.gui.views.batch_view import BatchView
 from app.gui.views.logs_view import LogsView
 
-# Placeholders for Nishit and Tanish's views
-class SecurityViewPlaceholder(ctk.CTkFrame):
-    def __init__(self, master, **kwargs):
-        super().__init__(master, **kwargs)
-        lbl = ctk.CTkLabel(self, text="Security View (Nishit's branch)")
-        lbl.pack(expand=True)
-
-class ConversionViewPlaceholder(ctk.CTkFrame):
-    def __init__(self, master, **kwargs):
-        super().__init__(master, **kwargs)
-        lbl = ctk.CTkLabel(self, text="Conversion View (Tanish's branch)")
-        lbl.pack(expand=True)
+from app.gui.views.security_view import SecurityView
+from app.gui.views.conversion_view import ConversionView
 
 
 class AppWindow(ctk.CTk):
@@ -66,8 +56,8 @@ class AppWindow(ctk.CTk):
         # Init views
         self.views = {
             "org": OrganizationView(self.main_frame),
-            "sec": SecurityViewPlaceholder(self.main_frame),
-            "conv": ConversionViewPlaceholder(self.main_frame),
+            "sec": SecurityView(self.main_frame),
+            "conv": ConversionView(self.main_frame),
             "batch": BatchView(self.main_frame),
             "logs": LogsView(self.main_frame),
         }
