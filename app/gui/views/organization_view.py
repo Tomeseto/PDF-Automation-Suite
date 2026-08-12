@@ -53,7 +53,7 @@ class OrganizationView(ctk.CTkFrame):
         self.merge_input = FilePicker(tab, label_text="Select PDFs to Merge:", select_multiple=True)
         self.merge_input.grid(row=0, column=0, sticky="ew", pady=(10, 5))
         
-        self.merge_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, filetypes=(("PDF", "*.pdf"),))
+        self.merge_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, save_as=True, filetypes=(("PDF", "*.pdf"),))
         self.merge_output.grid(row=1, column=0, sticky="ew", pady=5)
         
         self.merge_status = StatusBar(tab)
@@ -82,7 +82,7 @@ class OrganizationView(ctk.CTkFrame):
         self.split_ranges_entry = ctk.CTkEntry(tab, placeholder_text="Ranges (e.g. 1-3, 4-5)")
         self.split_ranges_entry.grid(row=1, column=0, sticky="ew", pady=5, padx=10)
         
-        self.split_output = FilePicker(tab, label_text="Output Prefix (Save As):", select_dir=False, filetypes=(("PDF", "*.pdf"),))
+        self.split_output = FilePicker(tab, label_text="Output Prefix (Save As):", select_dir=False, save_as=True, filetypes=(("PDF", "*.pdf"),))
         self.split_output.grid(row=2, column=0, sticky="ew", pady=5)
         
         self.split_status = StatusBar(tab)
@@ -121,7 +121,7 @@ class OrganizationView(ctk.CTkFrame):
         self.ext_pages_entry = ctk.CTkEntry(tab, placeholder_text="Pages (e.g. 1, 3, 5)")
         self.ext_pages_entry.grid(row=1, column=0, sticky="ew", pady=5, padx=10)
         
-        self.ext_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, filetypes=(("PDF", "*.pdf"),))
+        self.ext_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, save_as=True, filetypes=(("PDF", "*.pdf"),))
         self.ext_output.grid(row=2, column=0, sticky="ew", pady=5)
         
         self.ext_status = StatusBar(tab)
@@ -161,7 +161,7 @@ class OrganizationView(ctk.CTkFrame):
         self.rot_pages_entry = ctk.CTkEntry(tab, placeholder_text="Pages to rotate (e.g. 1, 3) or leave blank for all")
         self.rot_pages_entry.grid(row=2, column=0, sticky="ew", pady=5, padx=10)
         
-        self.rot_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, filetypes=(("PDF", "*.pdf"),))
+        self.rot_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, save_as=True, filetypes=(("PDF", "*.pdf"),))
         self.rot_output.grid(row=3, column=0, sticky="ew", pady=5)
         
         self.rot_status = StatusBar(tab)
@@ -201,7 +201,7 @@ class OrganizationView(ctk.CTkFrame):
         self.re_order_entry = ctk.CTkEntry(tab, placeholder_text="New Order (e.g. 3, 1, 2)")
         self.re_order_entry.grid(row=1, column=0, sticky="ew", pady=5, padx=10)
         
-        self.re_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, filetypes=(("PDF", "*.pdf"),))
+        self.re_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, save_as=True, filetypes=(("PDF", "*.pdf"),))
         self.re_output.grid(row=2, column=0, sticky="ew", pady=5)
         
         self.re_status = StatusBar(tab)

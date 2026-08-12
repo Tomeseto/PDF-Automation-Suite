@@ -88,7 +88,7 @@ class ConversionView(ctk.CTkFrame):
         self.i2p_input = FilePicker(tab, label_text="Select Images:", select_multiple=True, filetypes=(("Images", "*.png;*.jpg;*.jpeg"),))
         self.i2p_input.grid(row=0, column=0, sticky="ew", pady=(10, 5))
         
-        self.i2p_output = FilePicker(tab, label_text="Save PDF As:", select_dir=False, filetypes=(("PDF", "*.pdf"),))
+        self.i2p_output = FilePicker(tab, label_text="Save PDF As:", select_dir=False, save_as=True, filetypes=(("PDF", "*.pdf"),))
         self.i2p_output.grid(row=1, column=0, sticky="ew", pady=5)
         
         self.i2p_status = StatusBar(tab)
@@ -117,7 +117,7 @@ class ConversionView(ctk.CTkFrame):
         cb = ctk.CTkCheckBox(tab, text="Enhance Scans (Deskew & Contrast)", variable=self.scan_enhance_var)
         cb.grid(row=1, column=0, sticky="w", pady=5, padx=10)
         
-        self.scan_output = FilePicker(tab, label_text="Save Scanned PDF As:", select_dir=False, filetypes=(("PDF", "*.pdf"),))
+        self.scan_output = FilePicker(tab, label_text="Save Scanned PDF As:", select_dir=False, save_as=True, filetypes=(("PDF", "*.pdf"),))
         self.scan_output.grid(row=2, column=0, sticky="ew", pady=5)
         
         self.scan_status = StatusBar(tab)

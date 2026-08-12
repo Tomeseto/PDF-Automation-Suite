@@ -53,7 +53,7 @@ class SecurityView(ctk.CTkFrame):
         self.pass_entry = ctk.CTkEntry(tab, placeholder_text="Password", show="*")
         self.pass_entry.grid(row=1, column=0, sticky="ew", pady=5, padx=10)
         
-        self.pass_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, filetypes=(("PDF", "*.pdf"),))
+        self.pass_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, save_as=True, filetypes=(("PDF", "*.pdf"),))
         self.pass_output.grid(row=2, column=0, sticky="ew", pady=5)
         
         self.pass_status = StatusBar(tab)
@@ -97,7 +97,7 @@ class SecurityView(ctk.CTkFrame):
         self.wm_text_entry = ctk.CTkEntry(tab, placeholder_text="Watermark Text (e.g. DRAFT)")
         self.wm_text_entry.grid(row=1, column=0, sticky="ew", pady=5, padx=10)
         
-        self.wm_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, filetypes=(("PDF", "*.pdf"),))
+        self.wm_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, save_as=True, filetypes=(("PDF", "*.pdf"),))
         self.wm_output.grid(row=2, column=0, sticky="ew", pady=5)
         
         self.wm_status = StatusBar(tab)
@@ -152,7 +152,7 @@ class SecurityView(ctk.CTkFrame):
         self.sig_y = ctk.CTkEntry(pos_frame, placeholder_text="Y (e.g. 100)")
         self.sig_y.grid(row=0, column=2, padx=2)
         
-        self.sig_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, filetypes=(("PDF", "*.pdf"),))
+        self.sig_output = FilePicker(tab, label_text="Save Output As:", select_dir=False, save_as=True, filetypes=(("PDF", "*.pdf"),))
         self.sig_output.grid(row=3, column=0, sticky="ew", pady=5)
         
         self.sig_status = StatusBar(tab)

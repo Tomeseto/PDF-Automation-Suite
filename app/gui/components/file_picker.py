@@ -13,6 +13,7 @@ class FilePicker(ctk.CTkFrame):
         label_text: str = "Select File:",
         select_dir: bool = False,
         select_multiple: bool = False,
+        save_as: bool = False,
         filetypes: tuple = (("PDF Files", "*.pdf"), ("All Files", "*.*")),
         **kwargs
     ):
@@ -20,6 +21,7 @@ class FilePicker(ctk.CTkFrame):
         
         self.select_dir = select_dir
         self.select_multiple = select_multiple
+        self.save_as = save_as
         self.filetypes = filetypes
         self._current_paths: list[str] = []
 
@@ -54,6 +56,10 @@ class FilePicker(ctk.CTkFrame):
             paths = filedialog.askopenfilenames(filetypes=self.filetypes)
             if paths:
                 self.set_paths(list(paths))
+        elif self.save_as:
+            path = filedialog.asksaveasfilename(defaultextension=".pdf", filetypes=self.filetypes)
+            if path:
+                self.set_paths([path])
         else:
             path = filedialog.askopenfilename(filetypes=self.filetypes)
             if path:
