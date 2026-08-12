@@ -1,0 +1,17 @@
+# PDF manipulation — merge, split, extract, rotate, reorder, organize, password (Tanmay, Nishit)
+pypdf>=3.0.0
+
+# PDF rendering, text extraction, search (Tanish)
+PyMuPDF>=1.23.0
+
+# Fallback text/layout extraction (Tanish)
+pdfplumber>=0.10.0
+
+# Image handling — scan-to-PDF, image-to-PDF, PDF-to-image (Tanish)
+Pillow>=10.0.0
+
+# Watermark and signature overlay generation (Nishit)
+reportlab>=4.0.0
+
+# Testing (Everyone)
+pytest>=7.0.0
