@@ -2,8 +2,7 @@ import os
 from io import BytesIO
 import pypdf
 from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import letter
-from app.core.logger import log_event, STATUS_SUCCESS, STATUS_FAILURE, STATUS_WARNING
+from app.core.logger import log_event, STATUS_SUCCESS, STATUS_FAILURE
 
 def add_watermark(
     input_file: str,

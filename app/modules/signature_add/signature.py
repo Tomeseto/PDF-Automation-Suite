@@ -4,7 +4,7 @@ from io import BytesIO
 from PIL import Image, UnidentifiedImageError
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
-from app.core.logger import log_event, STATUS_SUCCESS, STATUS_FAILURE, STATUS_WARNING
+from app.core.logger import log_event, STATUS_SUCCESS, STATUS_FAILURE
 
 def add_signature(
     input_file: str,

@@ -1,7 +1,6 @@
 """Tests for Tanmay's GUI views."""
 
 import customtkinter as ctk
-import pytest
 
 from app.gui.views.organization_view import OrganizationView
 from app.gui.views.batch_view import BatchView

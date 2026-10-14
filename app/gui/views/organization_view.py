@@ -10,7 +10,6 @@ from app.modules.split_pdf import split_pdf
 from app.modules.extract_pages import extract_pages
 from app.modules.rotate_pages import rotate_pages
 from app.modules.reorder_pages import reorder_pages
-from app.modules.organize_pdf import organize_pdf
 
 class OrganizationView(ctk.CTkFrame):
     def __init__(self, master: Any, **kwargs):

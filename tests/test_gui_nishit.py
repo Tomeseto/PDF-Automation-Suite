@@ -1,7 +1,6 @@
 """Tests for Nishit's GUI views."""
 
 import customtkinter as ctk
-import pytest
 
 from app.gui.views.security_view import SecurityView
 

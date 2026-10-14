@@ -8,6 +8,7 @@ __pycache__/
 
 # Processing logs (generated at runtime)
 logs/
+temp_web/
 
 # Distribution / packaging
 *.egg-info/

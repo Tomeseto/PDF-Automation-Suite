@@ -1,7 +1,6 @@
 """Tests for Tanish's GUI views."""
 
 import customtkinter as ctk
-import pytest
 
 from app.gui.views.conversion_view import ConversionView
 

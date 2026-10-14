@@ -1,5 +1,4 @@
 import threading
-import json
 import customtkinter as ctk
 from typing import Any
 

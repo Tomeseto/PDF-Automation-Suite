@@ -16,5 +16,8 @@ reportlab>=4.0.0
 # Testing (Everyone)
 pytest>=7.0.0
 
-# GUI Framework
+# GUI & Web Framework
 customtkinter>=5.2.2
+fastapi>=0.110.0
+uvicorn>=0.28.0
+python-multipart>=0.0.9
